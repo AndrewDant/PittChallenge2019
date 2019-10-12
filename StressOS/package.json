@@ -1,0 +1,27 @@
+{
+  "fitbit": {
+    "appUUID": "0b55f0b1-cf4c-4bc9-bcec-6c809a09ca12",
+    "appType": "app",
+    "appDisplayName": "StressOS",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_activity",
+      "access_internet",
+      "run_background"
+    ],
+    "buildTargets": [
+      "higgs"
+    ],
+    "i18n": {
+      "en": {
+        "name": "StressOS"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.1.0"
+  }
+}

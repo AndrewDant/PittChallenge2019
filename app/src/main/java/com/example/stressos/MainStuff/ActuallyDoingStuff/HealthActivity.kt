@@ -1,6 +1,7 @@
 package com.example.stressos.MainStuff.ActuallyDoingStuff
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import android.view.LayoutInflater
 import com.google.android.material.snackbar.Snackbar
@@ -19,11 +20,20 @@ class HealthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_health)
 
-        //while(true){
-            //val rnds = (45..65).random()
-            val text = "45"     //Hardcoded for now, change with function name
-            TextViewHRUpdate.text = text
-        //}
+        val text = "63"     //Hardcoded for now, change with function name
+        TextViewHRUpdate.text = text
+
+        val timer = object: CountDownTimer(4000, 1000) {
+            var tim = 4
+            override fun onTick(millisUntilFinished: Long) {
+                TextViewCountDown.text = tim.toString()//millisUntilFinished.toString()
+                tim--
+            }
+            override fun onFinish() {
+                TextViewCountDown.text = "0"
+            }
+        }
+        timer.start()
 
         AnimatingCircle()
     }

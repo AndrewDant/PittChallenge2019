@@ -1,23 +1,27 @@
-package com.example.myself.stressos
+package com.example.stressos.MainStuff.MainDoot
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.example.stressos.MainStuff.ActuallyDoingStuff.HealthActivity
+import com.example.stressos.MainStuff.ShowInfo.InfoActivity
+import com.example.stressos.R
 
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+        ButtonPreviousActivity.setOnClickListener{
+            onButtonPrevious()
+        }
+        ButtonActivityCheck.setOnClickListener{
+            onButtonActivity()
         }
     }
 
@@ -35,5 +39,15 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun onButtonActivity() {
+        val intent = Intent(this, HealthActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onButtonPrevious (){
+        val intent = Intent(this, InfoActivity::class.java)
+        startActivity(intent)
     }
 }

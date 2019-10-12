@@ -1,4 +1,4 @@
-package com.example.myself.stressos
+package com.example.stressos
 
 import org.junit.Test
 

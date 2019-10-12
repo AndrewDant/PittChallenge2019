@@ -23,11 +23,14 @@ class HealthActivity : AppCompatActivity() {
         val text = "63"     //Hardcoded for now, change with function name
         TextViewHRUpdate.text = text
 
-        val timer = object: CountDownTimer(4000, 1000) {
+        val timer = object: CountDownTimer(19000, 1000) {
             var tim = 4
             override fun onTick(millisUntilFinished: Long) {
                 TextViewCountDown.text = tim.toString()//millisUntilFinished.toString()
                 tim--
+                if (tim == -1){
+                    tim = 4
+                }
             }
             override fun onFinish() {
                 TextViewCountDown.text = "0"

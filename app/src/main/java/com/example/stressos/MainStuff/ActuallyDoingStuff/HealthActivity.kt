@@ -1,6 +1,7 @@
 package com.example.stressos.MainStuff.ActuallyDoingStuff
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -18,16 +19,12 @@ class HealthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_health)
 
-        val text = "45"     //Hardcoded for now, change with function name
+        //while(true){
+            //val rnds = (45..65).random()
+            val text = "45"     //Hardcoded for now, change with function name
+            TextViewHRUpdate.text = text
+        //}
 
-        TextViewHRUpdate.text = text
+        AnimatingCircle()
     }
-
-    /*fun HeartBeat(val text: String){
-        fun bind(viewHolder: RecyclerView.ViewHolder){
-            viewHolder.itemView.TextViewHRUpdate.text = text
-
-            val updated = viewHolder.itemView.TextViewHRUpdate
-        }
-    }*/
 }

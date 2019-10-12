@@ -16,4 +16,5 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="title_activity_info">InfoActivity</string>
+    <string name="please_sit_while_using_this_function">Please sit while using this function</string>
 </resources>
